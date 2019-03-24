@@ -26,6 +26,7 @@ end
 def get_contestant_name(data, occupation)
   data.each do |season_num, contestants_array|
     contestants_array.each do |contestant_hash|
+<<<<<<< HEAD
       contestant_hash.each do |info_key, info_val|
       if info_val == occupation
         return contestant_hash["name"]
@@ -35,6 +36,15 @@ def get_contestant_name(data, occupation)
     end  
   end
   
+=======
+      binding.pry
+      contestant_hash[:occupation] = occupation
+        return contestant_hash["name"]
+        
+      end
+    end  
+  end
+>>>>>>> 0c8dc6d95323eba2221eac5969a3e85aa9cce79d
 
 def count_contestants_by_hometown(data, hometown)
   i = 0
